@@ -3,6 +3,15 @@ body {
     margin: 0;
     background-color: #f7f8fa;
     color: #333;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 header {
@@ -10,56 +19,202 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0 0 15px 0;
 }
 
 nav a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 nav a:hover, .active {
     color: #61dafb;
+    background-color: rgba(97, 218, 251, 0.1);
 }
 
 .intro {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .profile-pic {
     width: 180px;
+    height: 180px;
     border-radius: 50%;
     margin-right: 40px;
-    box-shadow: 0 0 10px #aaa;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+
+.intro-text h2 {
+    margin-top: 0;
+    color: #20232a;
+}
+
+.intro-text p {
+    max-width: 600px;
 }
 
 .resume, .biodata {
-    padding: 40px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.resume h2, .biodata h2 {
+    color: #20232a;
+    border-bottom: 3px solid #61dafb;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.resume ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resume ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.resume ul li:last-child {
+    border-bottom: none;
 }
 
 table {
-    width: 70%;
-    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
     border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: white;
 }
 
 th, td {
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
 
 th {
     background: #61dafb;
     color: #fff;
-    text-align: left;
+    font-weight: 600;
+    width: 35%;
+}
+
+td {
+    background: #fff;
 }
 
 footer {
     background: #20232a;
     color: #ccc;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: #61dafb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+    
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 150px;
+        height: 150px;
+    }
+    
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+    
+    .resume, .biodata {
+        padding: 20px 15px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+    
+    th {
+        width: 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px auto;
+        max-width: 150px;
+    }
+    
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    
+    table {
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 8px;
+        display: block;
+        width: 100% !important;
+    }
+    
+    th {
+        background: #61dafb;
+        text-align: center;
+    }
+    
+    tr {
+        margin-bottom: 15px;
+        display: block;
+        border: 1px solid #ddd;
+    }
 }
