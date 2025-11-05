@@ -6,6 +6,11 @@ body {
     line-height: 1.6;
 }
 
+:root {
+    --breakpoint-tablet: 768px;
+    --breakpoint-mobile: 480px;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -89,6 +94,12 @@ nav a:hover, .active {
 .resume ul li {
     padding: 10px 0;
     border-bottom: 1px solid #e0e0e0;
+    transition: padding-left 0.3s ease;
+}
+
+.resume ul li:hover {
+    padding-left: 10px;
+    background-color: rgba(97, 218, 251, 0.05);
 }
 
 .resume ul li:last-child {
@@ -204,7 +215,7 @@ footer a:hover {
     th, td {
         padding: 8px;
         display: block;
-        width: 100% !important;
+        width: 100%;
     }
     
     th {
